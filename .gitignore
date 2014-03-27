@@ -9,42 +9,60 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package checkstrings;
-import java.util.*;
+package paycheck;
+import javax.swing.*;
 /**
  *
  * @author 041401067
  */
-public class CheckStrings {
+public class PayCheck {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         // TODO code application logic here
         
-        //Initialise Variables
+        //Declare the program variables
         
-        String string1a;
-        String string1b;
+        String firstName;
+        String lastName;
+        String output;
+        double total;
+        String msgString;
+        double grossPay;
+        double finalAmount;
+        double grossAmount;
+        double federalTax;
+        double stateTax;
+        double socialSecurityTax;
+        double medicateTax;
+        double pensionPlan;
+        double healthInsurance;
+                
         
-        //Set the values firectly using the assignment statement
+        // Set the prgram sequence
         
-        string1a = "hello";
-        string1b = "hello";
+        firstName = JOptionPane.showInputDialog("What is your first Name?");
+        lastName = JOptionPane.showInputDialog("What is your last Name?");
+        grossPay = Double.parseDouble(JOptionPane.showInputDialog(" Please Enter your gross monthly income "));
+        federalTax = Math.round(0.15* grossPay);
+        stateTax = Math.round(0.035* grossPay);
+        socialSecurityTax = Math.round(0.0575* grossPay);
+        medicateTax = Math.round(0.0275* grossPay);
+        pensionPlan = Math.round(0.05* grossPay);
+        healthInsurance = 75;
+        msgString = ("\nName: " + firstName + " " + lastName + "\nGross Pay: " + grossPay + "\nFederal Tax: " + federalTax + "\nState Tax: " + stateTax + "\nSocial Security Tax: " + socialSecurityTax + "\nMedicate/Medicaid Tax: " + medicateTax + "\nPension Plan: " + pensionPlan + "\nHealth Insurance: " + healthInsurance);
         
-        System.out.println("are the first set the same and equal?\n" + (string1a == string1b) + " and " + (string1a.equals(string1b)));
+        //Output the total
         
-        //Now create two new objects and checl the same
-        String string2a;
-        String string2b;
+        JOptionPane.showMessageDialog(null, msgString, "Total", JOptionPane.INFORMATION_MESSAGE);  
         
-        //Set the calues using a new statement
         
-        string2a = new String("hello");
-        string2b = new String("hello");
+      
         
-        System.out.println("are the second set the same and equal?\n" + (string2a == string2b) + " and " + (string2a.equals(string2b)));
-            
+        
+          
     }
 }
