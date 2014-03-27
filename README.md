@@ -8,16 +8,5 @@ This small program I made prompts the user to enter their First Name, Last name 
 
 In return, the program calculates the End User's fictional tax, such as:
 
-
-    - Federal Tax
-    
-    - State Tax
-    
-    - Social Security Tax
-    
-    - Medicare
-     
-    - Pension Plan
-    
-    - Health Insurance
+Federal Tax, State Tax, Social Security Tax, Medicare, Pension Plan, Health Insurance.
     
